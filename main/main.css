@@ -1,0 +1,117 @@
+/* Style général des sections */
+.main{ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Style des conteneurs */
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Style des menus déroulants */
+.categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.category {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.images{
+    max-width: 4rem;
+    max-height: 4rem;
+}
+
+.dropdown {
+    
+    margin: 10px;
+}
+
+.dropbtn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    min-width: 200px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-bg);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #45a049;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--dropdown-hover-bg);
+}
+
+#secondCycle .dropbtn,
+#resources .dropbtn {
+  background-color: #e1e12a ;
+}
+
+
+#secondCycle:hover .dropbtn,
+#resources:hover .dropbtn {
+    background-color: #2980b9;
+}
+
+/* Animation pour le menu déroulant */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .dropbtn {
+        min-width: 150px;
+    }
+}

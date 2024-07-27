@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Science Gabon</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Vision Science Gabon">
+        </div>
+        <div class="auth-buttons">
+            <button class="auth-button1">Inscription</button>
+            <button class="auth-button2">Connexion</button>
+        </div>
+    </header>
+  
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#cours">Cours</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  
+    <main>
+        <section0 class="hero">
+            <div class="hero-content">
+                <h1>Votre plateforme éducative dédiée à l'excellence en Physique Chimie !</h1>
+            </div>
+       
+        <section class="categories">
+            <div class="category">
+                <img class="images" src="./assets/imgs/collègiens.jpg" alt="Premier cycle">
+                <div class="category-content">
+                    <p>Découvrez les cours et ressources pour le premier cycle.</p>
+                    <div class="dropdown" id="firstCycle">
+                        <button class="dropbtn">Premier Cycle</button>
+                   
+                    <div class="dropdown-content">
+                        <a href="/6eme">6ième</a>
+                        <a href="/5eme">5ième</a>
+                        <a href="/4eme">4ième</a>
+                        <a href="/3eme">3ième</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <img class="images" src="./assets/imgs/Lycée-.jpg" alt="Second cycle">
+                <div class="category-content">
+                   
+                    <div class="dropdown" id="secondCycle">
+                        <button class="dropbtn">Second Cycle</button>
+                        <p>Accédez aux matières et supports pour le second cycle.</p>
+                        <div class="dropdown-content">
+                            <a href="/2nde">2nde</a>
+                            <a href="/1ere">1ère</a>
+                            <a href="/terminale">Terminale</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <img class="images" src="./assets/imgs/prepa.jpg" alt="Classes préparatoires">
+                <div class="category-content">
+                    <h2>Classes préparatoires</h2>
+                    <p>Préparez-vous efficacement avec nos ressources pour les classes préparatoires.</p>
+                    <button class="dropbtn">Ressources</button>
+                    <div class="dropdown-content">
+                        <a href="/td">TD</a>
+                        <a href="/corriges">Corrigés</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                category.addEventListener('mouseenter', () => {
+                    category.style.transform = 'translateY(-10px)';
+                });
+                category.addEventListener('mouseleave', () => {
+                    category.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                      behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Modal for inscription and connexion buttons
+            const authButtons = document.querySelectorAll('.auth-button1, .auth-button2');
+            authButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    alert(`Fonctionnalité ${button.textContent} à implémenter`);
+                });
+            });
+        });
+    </script>
+    <footer>
+       
+    </footer>
+</body>
+</html>

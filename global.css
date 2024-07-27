@@ -1,0 +1,19 @@
+@import url(header/header.css);
+@import url(main/main.css);
+@import url(footer/footer.css);
+
+
+
+
+
+/* Définition des variables de couleur */
+:root {
+    --primary-color: #428323; /* Couleur principale */
+    --secondary-color: #e1e12a; /* Couleur secondaire */
+    --tertiary-color: #2530ac; /* Couleur tertiaire */
+    --text-color: #333; /* Couleur du texte */
+    --background-color: #f4f4f4; /* Couleur de fond */
+    --button-hover-color: #e1e12a; /* Couleur au survol des boutons */
+    --dropdown-bg: #f9f9f9; /* Couleur de fond du menu déroulant */
+    --dropdown-hover-bg: #ddd; /* Couleur de fond au survol des éléments du menu déroulant */
+}
